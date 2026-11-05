@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { createObserveModule } from '@nestjs/observe';
-import { AppController } from './app.controller.js';
-import { AppService } from './app.service.js';
+import { BooksController } from './app.controller.js';
+import { BooksService } from './app.service.js';
 
 export const { ObserveModule, ObserveInstrument } = createObserveModule();
 
@@ -16,7 +16,7 @@ export const { ObserveModule, ObserveInstrument } = createObserveModule();
       serviceId: 'book-api',
     }),
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [BooksController],
+  providers: [BooksService],
 })
 export class AppModule {}
